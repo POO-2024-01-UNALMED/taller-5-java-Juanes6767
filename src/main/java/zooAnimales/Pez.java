@@ -1,14 +1,16 @@
 package zooAnimales;
+import java.util.ArrayList;
+
 import gestion.Zona;
 public class Pez extends Animal {
-	private Pez[] listado;
+	private static ArrayList<Pez> listado;
 	public int salmones;
 	public int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
 	
 	public Pez () {}
-	public Pez (int totalAnimales,String nombre,int edad ,String habitat,String genero, Zona[] zona, int salmones, int bacalaos, String colorEscamas, int cantidadAletas) {
+	public Pez (int salmones, int bacalaos, String colorEscamas, int cantidadAletas,int totalAnimales,String nombre,int edad ,String habitat,String genero, ArrayList<Zona> zona) {
 		this.salmones=salmones;
 		this.bacalaos=bacalaos;
 		this.colorEscamas=colorEscamas;
@@ -19,13 +21,32 @@ public class Pez extends Animal {
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 		this.setZona(zona);
+		
+		listado.add(this);
 	}
 	
-	public Pez[] getListado() {
+	public void cantidadPeces() {
+		
+	}
+	
+	public String movimiento() {
+		return "nadar";
+		
+	}
+	
+	public void crearSalmon() {
+		
+	}
+	
+	public void crearBacalao() {
+		
+	}
+	
+	public static ArrayList<Pez> getListado() {
 		return listado;
 	}
-	public void setListado(Pez[] listado) {
-		this.listado=listado;
+	public void setListado(ArrayList<Pez> listado) {
+		Pez.listado=listado;
 	}
 	
 	public String getColorEscamas() {

@@ -1,17 +1,21 @@
 package zooAnimales;
+import java.util.ArrayList;
+
 import gestion.Zona;
+import gestion.Zoologico;
+
 public class Animal {
-	private int totalAnimales;
+	private static int totalAnimales;
 	private String nombre;
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona[] zona;;
+	private ArrayList<Zona> zona;
 	
 	public Animal () {}
-	public Animal (int totalAnimales, String nombre, int edad, String habitat, String genero,Zona[] zona)
+	public Animal (int totalAnimales, String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona)
 	{
-		this.totalAnimales=totalAnimales;
+		Animal.totalAnimales=totalAnimales;
 		this.nombre=nombre;
 		this.edad=edad;
 		this.habitat=habitat;
@@ -20,11 +24,35 @@ public class Animal {
 
 	}
 	
+	public String movimiento() {
+		return "desplazarse";
+		
+	}
+	
+	public void totalPorTipo() {
+		System.out.println("Mamiferos:"+ Mamifero.getListado().size()+
+				"\n"+"Aves:"+Ave.getListado().size()+
+				"\n"+"Reptiles:"+Reptil.getListado().size()+
+				"\n"+"Peces:"+Pez.getListado().size()+
+				"\n"+"Anfibios:"+Anfibio.getListado().size());
+		
+	}	
+
+
+	public String toString(Zona zona,Zoologico zoo) {
+		if (zona!=null){
+		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+
+				", la zona en la que me ubico es "+zona.getNombre()+", en el "+zoo.getNombre();
+		} else {
+		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
+		}
+	}	
+	
 	public int getTotalAnimales(){
 		return totalAnimales;
 	}
 	public void setTotalAnimales(int totalAnimales){
-		this.totalAnimales=totalAnimales;
+		Animal.totalAnimales=totalAnimales;
 	}
 	
 	public String getNombre(){
@@ -55,10 +83,10 @@ public class Animal {
 		this.genero=genero;
 	}
 	
-	public Zona[] getZona(){
+	public ArrayList<Zona> getZona(){
 		return zona;
 	}
-	public void setZona(Zona[] zona){
+	public void setZona(ArrayList<Zona> zona){
 		this.zona=zona;
 	}
 }
