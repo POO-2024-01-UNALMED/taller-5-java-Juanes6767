@@ -26,12 +26,12 @@ public class Animal {
 		
 	}
 	
-	public void totalPorTipo() {
-		System.out.println("Mamiferos:"+ Mamifero.getListado().size()+
+	public String totalPorTipo() {
+		return "Mamiferos:"+ Mamifero.getListado().size()+
 				"\n"+"Aves:"+Ave.getListado().size()+
 				"\n"+"Reptiles:"+Reptil.getListado().size()+
 				"\n"+"Peces:"+Pez.getListado().size()+
-				"\n"+"Anfibios:"+Anfibio.getListado().size());
+				"\n"+"Anfibios:"+Anfibio.getListado().size();
 		
 	}	
 
