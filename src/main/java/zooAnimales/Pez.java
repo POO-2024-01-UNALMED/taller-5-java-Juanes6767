@@ -9,17 +9,16 @@ public class Pez extends Animal {
 	
 	public Pez () {}
 	public Pez (int totalAnimales,String nombre,int edad ,String habitat,String genero, Zona[] zona, int salmones, int bacalaos, String colorEscamas, int cantidadAletas) {
+		this.salmones=salmones;
+		this.bacalaos=bacalaos;
+		this.colorEscamas=colorEscamas;
+		this.cantidadAletas=cantidadAletas;
 		this.setTotalAnimales(totalAnimales);
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 		this.setZona(zona);
-		this.salmones=salmones;
-		this.bacalaos=bacalaos;
-		this.colorEscamas=colorEscamas;
-		this.cantidadAletas=cantidadAletas;
-		
 	}
 	
 	public Pez[] getListado() {

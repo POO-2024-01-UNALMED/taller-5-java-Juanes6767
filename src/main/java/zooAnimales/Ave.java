@@ -6,11 +6,14 @@ public class Ave  extends Animal {
 	public int aguilas;
 	private String colorPlumas;
 	
-	public get{
-		return
+	public String getColorPlumas() {
+		return colorPlumas;
 	}
-	public void set{
-		this.=;
+
+	public void setColorPlumas(String colorPlumas) {
+		this.colorPlumas = colorPlumas;
+	}
+
 	}
 	
 	public get{

@@ -1,25 +1,26 @@
 package gestion;
-
+import gestion.Zoologico;
+import zooAnimales.Animal;
 public class Zona {
 	private String nombre;
-	private String ubicacion;
-	private Zona[] zonas;
+	private Zoologico[] zoo;
+	private Animal[] animales;
 	
 	public Zona () {}
-	public Zona (String nombre, String ubicacion, Zona[] zonas) {
+	public Zona (String nombre, Zoologico[] zoo, Animal[] animales) {
 		this.nombre=nombre;
-		this.ubicacion=ubicacion;
-		this.zonas=zonas;
+		this.zoo=zoo;
+		this.animales=animales;
 	}
 	
-	public getNombre{
+	public String getNombre{
 		return
 	}
 	public void setNombre(String nombre){
 		this.nombre=nombre;
 	}
 	
-	public get{
+	public Zoologico[1] get{
 		return
 	}
 	public void set{

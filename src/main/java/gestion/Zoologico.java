@@ -9,6 +9,7 @@ public class Zoologico {
 		this.nombre=nombre;
 		this.ubicacion=ubicacion;
 		
+		
 	}
 	public String getNombre(){
 		return nombre;
