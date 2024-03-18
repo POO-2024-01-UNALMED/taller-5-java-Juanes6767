@@ -84,6 +84,6 @@ public class Animal {
 		return zona;
 	}
 	public void setZona(ArrayList<Zona> zona){
-		this.zona=zona;
+		Animal.zona=zona;
 	}
 }

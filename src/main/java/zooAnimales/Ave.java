@@ -2,7 +2,6 @@ package zooAnimales;
 
 import java.util.ArrayList;
 
-import gestion.Zona;
 
 public class Ave  extends Animal {
 	private static ArrayList<Ave> listado;
@@ -23,8 +22,8 @@ public class Ave  extends Animal {
 		listado.add(this);
 	}
 	
-	public void cantidadAves() {
-		return halcone+aguilas;
+	public int cantidadAves() {
+		return halcones+aguilas;
 	}
 	
 	public String movimiento() {
@@ -53,8 +52,5 @@ public class Ave  extends Animal {
 	
 	public static ArrayList<Ave> getListado(){
 		return listado;
-	}
-	public void set{
-		this.=;
 	}
 }

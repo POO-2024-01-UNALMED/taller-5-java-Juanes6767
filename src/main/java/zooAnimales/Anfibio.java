@@ -61,7 +61,4 @@ public class Anfibio  extends Animal {
 	public static ArrayList<Anfibio> getListado(){
 		return listado;
 	}
-	public void set{
-		this.=;
-	}
 }

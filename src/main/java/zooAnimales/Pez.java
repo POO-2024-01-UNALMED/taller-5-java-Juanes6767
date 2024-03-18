@@ -1,7 +1,6 @@
 package zooAnimales;
 import java.util.ArrayList;
 
-import gestion.Zona;
 public class Pez extends Animal {
 	private static ArrayList<Pez> listado;
 	public static int salmones;
