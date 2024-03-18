@@ -27,8 +27,8 @@ public class Zona {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Zoologico[] getZoo() {
-		return zoo;
+	public Zoologico getZoo() {
+		return zoo[0];
 	}
 	public void setZoo(Zoologico[] zoo) {
 		this.zoo = zoo;
