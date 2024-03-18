@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import zooAnimales.Animal;
 public class Zona {
 	private String nombre;
-	private ArrayList<Zoologico> zoo=new ArrayList<>(1);
+	private Zoologico[] zoo=new Zoologico[1];
 	private static ArrayList<Animal> animales;
 	
 	public Zona () {}
-	public Zona (String nombre, ArrayList<Zoologico> zoo) {
+	public Zona (String nombre, Zoologico[] zoo) {
 		this.nombre=nombre;
 		this.zoo=zoo;
 	}
@@ -27,10 +27,10 @@ public class Zona {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public ArrayList<Zoologico> getZoo() {
+	public Zoologico[] getZoo() {
 		return zoo;
 	}
-	public void setZoo(ArrayList<Zoologico> zoo) {
+	public void setZoo(Zoologico[] zoo) {
 		this.zoo = zoo;
 	}
 	
