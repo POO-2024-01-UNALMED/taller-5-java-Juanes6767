@@ -5,13 +5,12 @@ import java.util.ArrayList;
 public class Zoologico {
 	private String nombre;
 	private String ubicacion;
-	private ArrayList<Zona> zonas; 
+	private static ArrayList<Zona> zonas; 
 	
 	public Zoologico() {}
-	public Zoologico(String nombre, String ubicacion,ArrayList<Zona> zonas) {
+	public Zoologico(String nombre, String ubicacion) {
 		this.nombre=nombre;
 		this.ubicacion=ubicacion;
-		this.zonas=zonas;
 	}
 	
 	public void agregarZonas(Zona zona) {

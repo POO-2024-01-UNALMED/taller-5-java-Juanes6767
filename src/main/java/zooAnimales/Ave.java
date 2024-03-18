@@ -6,41 +6,41 @@ import gestion.Zona;
 
 public class Ave  extends Animal {
 	private static ArrayList<Ave> listado;
-	public int halcones;
-	public int aguilas;
+	public static int halcones;
+	public static int aguilas;
 	private String colorPlumas;
 	
-	public Ave () {}
-	public Ave (ArrayList<Ave> listado, int halcones,int aguilas, String colorPlumas, int totalAnimales, String nombre,int edad ,String habitat,String genero, ArrayList<Zona> zona) {
-		Ave.listado=listado;
-		this.halcones=halcones;
-		this.aguilas=aguilas;
+	public Ave () {
+		listado.add(this);
+	}
+	public Ave ( String nombre,int edad ,String habitat,String genero,String colorPlumas) {
 		this.colorPlumas=colorPlumas;
-		this.setTotalAnimales(totalAnimales);
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
-		this.setZona(zona);
 		
 		listado.add(this);
 	}
 	
 	public void cantidadAves() {
-		
+		return halcone+aguilas;
 	}
 	
 	public String movimiento() {
 		return "volar";
 	}
 	
-	public void crearhalcon() {
-		
-	}
+	public void crearHalcon(String nombre,int edad,String genero) {
+		new Ave(nombre,edad ,"montañas",genero,"cafe glorios");
+		halcones++;
+		}
 	
-	public void crearAguila() {
-		
-	}
+	
+	public void crearAguila(String nombre,int edad,String genero) {
+		new Ave(nombre,edad ,"montañas",genero,"blanco y amarillo");
+		aguilas++;
+		}
 	
 	
 	public String getColorPlumas() {
