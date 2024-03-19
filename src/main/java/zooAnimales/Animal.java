@@ -46,7 +46,7 @@ public class Animal {
 	}	
 	
 	public int getTotalAnimales(){
-		return totalAnimales;
+		return Mamifero.cantidadMamiferos()+Ave.cantidadAves()+Reptil.cantidadReptiles()+Pez.cantidadPeces()+Anfibio.cantidadAnfibios();
 	}
 	public void setTotalAnimales(int totalAnimales){
 		Animal.totalAnimales=totalAnimales;

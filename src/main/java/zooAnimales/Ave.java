@@ -22,7 +22,7 @@ public class Ave  extends Animal {
 		listado.add(this);
 	}
 	
-	public int cantidadAves() {
+	public static int cantidadAves() {
 		return halcones+aguilas;
 	}
 	

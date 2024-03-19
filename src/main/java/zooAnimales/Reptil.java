@@ -23,7 +23,7 @@ public class Reptil extends Animal {
 		listado.add(this);
 	}
 	
-	public int cantidadReptiles() {
+	public static int cantidadReptiles() {
 		return iguanas+serpientes;
 	}
 	

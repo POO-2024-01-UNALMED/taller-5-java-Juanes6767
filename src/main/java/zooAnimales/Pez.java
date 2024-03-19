@@ -21,7 +21,7 @@ public class Pez extends Animal {
 		listado.add(this);
 	}
 	
-	public int cantidadPeces() {
+	public static int cantidadPeces() {
 		return salmones+bacalaos;
 	}
 	
