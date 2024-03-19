@@ -10,7 +10,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private static ArrayList<Zona> zona;
+	private static ArrayList<Zona> zona= new ArrayList<>();
 	
 	public Animal () {}
 	public Animal (String nombre, int edad, String habitat, String genero){
