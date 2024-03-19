@@ -31,15 +31,15 @@ public class Ave  extends Animal {
 	}
 	
 	public static Ave crearHalcon(String nombre,int edad,String genero) {
-		
+		Ave a=new Ave(nombre,edad ,"montanas",genero,"cafe glorios");
 		halcones++;
-		return new Ave(nombre,edad ,"montanas",genero,"cafe glorios");}
+		return a;}
 	
 	
 	public static Ave crearAguila(String nombre,int edad,String genero) {
-		
+		Ave a=new Ave(nombre,edad ,"montanas",genero,"blanco y amarillo");
 		aguilas++;
-		return new Ave(nombre,edad ,"montanas",genero,"blanco y amarillo");}
+		return a;}
 	
 	
 	public String getColorPlumas() {
