@@ -17,6 +17,7 @@ public class Pez extends Animal {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
+		this.setGenero(genero);
 		
 		listado.add(this);
 	}

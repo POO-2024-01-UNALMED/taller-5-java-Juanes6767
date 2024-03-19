@@ -13,11 +13,8 @@ public class Ave  extends Animal {
 		listado.add(this);
 	}
 	public Ave ( String nombre,int edad ,String habitat,String genero,String colorPlumas) {
+		super(nombre, edad, habitat,genero);
 		this.colorPlumas=colorPlumas;
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
 		
 		listado.add(this);
 	}
@@ -48,9 +45,5 @@ public class Ave  extends Animal {
 
 	public void setColorPlumas(String colorPlumas) {
 		this.colorPlumas = colorPlumas;
-	}
-	
-	public static ArrayList<Ave> getListado(){
-		return listado;
 	}
 }
