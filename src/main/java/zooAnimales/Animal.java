@@ -10,7 +10,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private static ArrayList<Zona> zona= new ArrayList<>();
+	private ArrayList<Zona> zona= new ArrayList<>();
 	
 	public Animal () {}
 	public Animal (String nombre, int edad, String habitat, String genero){
@@ -36,20 +36,19 @@ public class Animal {
 	}	
 
 
-	public String toString(Zona zona,Zoologico zoo) {
-		if (Animal.zona.size()!=0){
-		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+
-				", la zona en la que me ubico es "+Animal.zona.get(0).getNombre()+", en el "+Animal.zona.get(0).getZoo();
-		} else {
-		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
-		}
+	public String toString(){
+		if (zona.size()!=0)
+		return "Mi nombre es "+this.nombre+", tengo una edad de "+this.edad+", habito en "+this.habitat+", y mi genero es "+
+				this.genero+", la zona en la que me ubico es "+this.zona.get(0).getNombre()+", en el "+this.zona.get(0).getZoo().getNombre();
+		else
+			return "Mi nombre es "+this.nombre+", tengo una edad de "+this.edad+", habito en "+this.habitat+" y mi genero es "+this.genero;
 	}	
 	
 	public int getTotalAnimales(){
 		return Mamifero.cantidadMamiferos()+Ave.cantidadAves()+Reptil.cantidadReptiles()+Pez.cantidadPeces()+Anfibio.cantidadAnfibios();
 	}
 	public void setTotalAnimales(int totalAnimales){
-		Animal.totalAnimales=totalAnimales;
+		totalAnimales++;
 	}
 	
 	public String getNombre(){
@@ -80,10 +79,4 @@ public class Animal {
 		this.genero=genero;
 	}
 	
-	public ArrayList<Zona> getZona(){
-		return zona;
-	}
-	public void setZona(ArrayList<Zona> zona){
-		Animal.zona=zona;
-	}
 }
