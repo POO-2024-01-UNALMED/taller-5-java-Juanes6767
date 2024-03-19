@@ -27,19 +27,19 @@ public class Animal {
 	}
 	
 	public static String totalPorTipo() {
-		return "Mamiferos:"+ Mamifero.getListado().size()+
-				"\n"+"Aves:"+Ave.getListado().size()+
-				"\n"+"Reptiles:"+Reptil.getListado().size()+
-				"\n"+"Peces:"+Pez.getListado().size()+
-				"\n"+"Anfibios:"+Anfibio.getListado().size();
+		return "Mamiferos: "+(Mamifero.cantidadMamiferos())+"\n"+
+				"Aves: "+(Ave.cantidadAves())+ "\n"+
+				"Reptiles: "+(Reptil.cantidadReptiles())+"\n"+
+				"Peces: " +(Pez.cantidadPeces())+ "\n"+
+				"Anfibios: "+(Anfibio.cantidadAnfibios());
 		
 	}	
 
 
 	public String toString(Zona zona,Zoologico zoo) {
-		if (zona!=null){
+		if (Animal.zona.size()!=0){
 		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+
-				", la zona en la que me ubico es "+zona.getNombre()+", en el "+zoo.getNombre();
+				", la zona en la que me ubico es "+Animal.zona.get(0).getNombre()+", en el "+Animal.zona.get(0).getZoo();
 		} else {
 		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
 		}
